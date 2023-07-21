@@ -1,0 +1,84 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+}
+
+.topic-container {
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  width: 400px;
+  background: #eee;
+  font-family: "Roboto", sans-serif;
+}
+
+.topic-container p {
+  margin: 0;
+}
+
+.topic-container h2 {
+  margin: 8px 0;
+}
+
+.topic-container label {
+  width: 100%;
+  padding-block: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding-left: 64px;
+  position: relative;
+}
+
+.topic-container .radio:checked + label {
+  background: #023047;
+  color: #fff;
+}
+
+.topic-container .radio {
+  display: none;
+}
+
+.topic-container label::after {
+  content: "";
+  position: absolute;
+  left: 24px;
+  height: 24px;
+  width: 24px;
+  border: 2px solid #023047;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.topic-container .radio:checked + label::after {
+  border: 2px solid #fff;
+}
+
+.topic-container label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 30px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.topic-container .radio:checked + label::before {
+  background: #fff;
+}
+
+.custom-radio-buttons .btn {
+  padding: 12px 32px;
+  background: #eee;
+  color: #023047;
+  border: 1px solid #023047;
+  border-radius: 8px;
+  font-size: 18px;
+  margin: 16px 0;
+  cursor: pointer;
+}
